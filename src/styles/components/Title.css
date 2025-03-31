@@ -1,0 +1,75 @@
+/* src/styles/components/Title.css */
+.title-container {
+    width: 100%;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .title-content {
+    padding: 2rem;
+  }
+  
+  .title-main {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title-name {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  
+  .title-line {
+    height: 2px;
+    width: 80px;
+    background-color: white;
+    margin: 0 10px;
+  }
+  
+  .title-star {
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .title-main {
+      font-size: 3rem;
+    }
+    
+    .title-name {
+      font-size: 2.5rem;
+    }
+    
+    .title-line {
+      width: 50px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title-main {
+      font-size: 2.5rem;
+    }
+    
+    .title-name {
+      font-size: 2rem;
+    }
+    
+    .title-line {
+      width: 40px;
+    }
+    
+    .title-star {
+      font-size: 1.2rem;
+    }
+  }

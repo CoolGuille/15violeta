@@ -1,0 +1,102 @@
+/* src/styles/components/Location.css */
+.location-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .location-content {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .location-title {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    font-family: var(--font-title);
+  }
+  
+  .location-card {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+  
+  .location-icon {
+    font-size: 2.5rem;
+    margin-right: 2rem;
+  }
+  
+  .location-details {
+    flex: 1;
+  }
+  
+  .location-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+  }
+  
+  .location-details p {
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  .location-time {
+    display: flex;
+    margin-bottom: 1.5rem;
+  }
+  
+  .location-time-item {
+    margin-right: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .location-time-icon {
+    margin-right: 0.5rem;
+  }
+  
+  .location-map-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .location-map-button:hover {
+    background-color: #e45a9d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  @media (max-width: 768px) {
+    .location-card {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .location-icon {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+    
+    .location-time {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .location-time-item {
+      margin-right: 0;
+      margin-bottom: 0.5rem;
+    }
+  }

@@ -1,0 +1,91 @@
+/* src/styles/components/DressCode.css */
+.dress-code-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .dress-code-content {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .dress-code-title {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    font-family: var(--font-title);
+  }
+  
+  .dress-code-card {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+  
+  .dress-code-icon {
+    font-size: 2.5rem;
+    margin-right: 2rem;
+  }
+  
+  .dress-code-details {
+    flex: 1;
+  }
+  
+  .dress-code-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+  }
+  
+  .dress-code-details p {
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  .dress-code-colors {
+    margin-top: 1rem;
+  }
+  
+  .dress-code-colors-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .dress-code-color-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .dress-code-color-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  .dress-code-color-item:hover {
+    transform: scale(1.2);
+  }
+  
+  @media (max-width: 768px) {
+    .dress-code-card {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .dress-code-icon {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+    
+    .dress-code-color-list {
+      justify-content: center;
+    }
+  }

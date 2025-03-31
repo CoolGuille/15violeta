@@ -1,0 +1,102 @@
+/* src/styles/global.css */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --primary-color: #ffb6c1; /* Rosa claro */
+  --secondary-color: #f8f9fa;
+  --accent-color: #ff69b4; /* Rosa hot pink */
+  --text-color: #333;
+  --light-text: #fff;
+  --font-title: 'Dancing Script', cursive;
+  --font-text: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-text);
+  color: var(--text-color);
+  background-color: #f9f9f9;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent; /* Elimina el destello en taps en dispositivos móviles */
+}
+
+.app {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.cover-section {
+  background-color: var(--secondary-color);
+}
+
+.title-section {
+  background-color: var(--primary-color);
+}
+
+.message-section {
+  background-color: var(--secondary-color);
+}
+
+.countdown-section {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  color: var(--light-text);
+}
+
+.location-section {
+    background-color: var(--secondary-color);
+}
+
+.dress-code-section {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+}
+
+.gallery-section {
+    background-color: var(--secondary-color);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-title);
+}
+
+button {
+  cursor: pointer;
+  touch-action: manipulation; /* Mejora el comportamiento táctil */
+}
+
+.invitation-content {
+  width: 100%;
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+  .section {
+    padding: 1rem;
+  }
+}
+
+/* Optimizaciones para interacción táctil */
+@media (hover: none) {
+  button:active {
+    transform: scale(0.95);
+  }
+}
