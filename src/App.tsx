@@ -19,17 +19,16 @@ function App() {
   // Aquí definimos las propiedades que luego podrías configurar
   const birthday = {
     name: "Violeta",
-    date: new Date('2025-05-31T20:00:00'), // Fecha de la fiesta (año-mes-día)
+    date: new Date('2025-05-31T00:00:00Z'), // Fecha de la fiesta (año-mes-día)
     message: "Si estás leyendo esto, es porque eres una persona muy especial para mí. Me encantaría compartir este día tan importante contigo. ¡Te espero para celebrar mis 15 años juntos!",
-    venue: "Salón Jardines del Rey",
-    address: "Av. Libertador 1234, Buenos Aires",
-    eventDate: "15 de Junio de 2025",
-    eventTime: "20:00 hs",
-    mapUrl: "https://maps.google.com/?q=Buenos+Aires",
+    venue: "Salón Gala Eventos",
+    address: "Centenario 325, Rosario",
+    eventDate: "31 de Mayo de 2025",
+    eventTime: "21:00 hs",
+    mapUrl: "https://maps.app.goo.gl/Yof2wpE3gH7UgSiy6",
     dressCode: "Elegante Sport",
     dressCodeDescription: "Te sugerimos vestimenta elegante pero cómoda para disfrutar de la fiesta. Los colores sugeridos son pasteles y tonos neutros.",
     dressCodeColors: ["#f8c6d8", "#d8e8f8", "#f0f0f0", "#d3d3d3"],
-      // Para las imágenes puedes usar placeholders por ahora
     images: [
       { src: "https://via.placeholder.com/400x400?text=Foto+1", alt: "Recuerdo 1" },
       { src: "https://via.placeholder.com/400x400?text=Foto+2", alt: "Recuerdo 2" },

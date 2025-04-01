@@ -1,4 +1,3 @@
-/* src/styles/global.css */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
 
 :root {
@@ -33,6 +32,7 @@ body {
 .app {
   overflow-x: hidden;
   width: 100%;
+  position: relative;
 }
 
 .section {
@@ -62,16 +62,16 @@ body {
 }
 
 .location-section {
-    background-color: var(--secondary-color);
+  background-color: var(--secondary-color);
 }
 
 .dress-code-section {
-    background-color: var(--primary-color);
-    color: var(--light-text);
+  background-color: var(--primary-color);
+  color: var(--light-text);
 }
 
 .gallery-section {
-    background-color: var(--secondary-color);
+  background-color: var(--secondary-color);
 }
 
 h1, h2, h3 {
@@ -85,6 +85,7 @@ button {
 
 .invitation-content {
   width: 100%;
+  overflow-x: hidden;
 }
 
 /* Estilos para móviles */

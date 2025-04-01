@@ -45,7 +45,8 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
               <img 
                 src={image.src} 
                 alt={image.alt} 
-                className="gallery-image" 
+                className="gallery-image"
+                style={{ maxWidth: '100%' }}
               />
             </motion.div>
           ))}
