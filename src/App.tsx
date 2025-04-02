@@ -6,6 +6,8 @@ import Countdown from './components/Countdown';
 import Location from './components/Location';
 import DressCode from './components/DressCode';
 import Gallery from './components/Gallery';
+import CalendarButton from './components/CalendarButton';
+import RSVP from './components/RSVP';
 import './styles/global.css';
 
 function App() {
@@ -36,7 +38,8 @@ function App() {
       { src: "https://via.placeholder.com/400x400?text=Foto+4", alt: "Recuerdo 4" },
       { src: "https://via.placeholder.com/400x400?text=Foto+5", alt: "Recuerdo 5" },
       { src: "https://via.placeholder.com/400x400?text=Foto+6", alt: "Recuerdo 6" },
-    ]
+    ],
+    formUrl: "https://docs.google.com/forms/d/e/1FAIpQLScT-eQIOLYxnBDSfeG8TzDMRFJFWiuy4OsQg6eKE5GQRgcYEw/viewform?embedded=true",
   };
 
   const handleOpenInvitation = () => {
@@ -61,7 +64,14 @@ function App() {
           </section>
           
           <section className="section countdown-section">
-            <Countdown targetDate={birthday.date} />
+            <div className="countdown-wrapper">
+              <Countdown targetDate={birthday.date} />
+              <CalendarButton 
+                title={`XV Años de ${birthday.name}`}
+                date={birthday.date}
+                location={`${birthday.venue}, ${birthday.address}`}
+              />
+            </div>
           </section>
 
           <section className="section location-section" id="location">
@@ -84,6 +94,10 @@ function App() {
 
           <section className="section gallery-section" id="gallery">
             <Gallery images={birthday.images} />
+          </section>
+
+          <section className="section rsvp-section" id="rsvp">
+            <RSVP formUrl={birthday.formUrl} />
           </section>
           
           {/* Acá irían los demás componentes que vamos a desarrollar */}

@@ -1,0 +1,42 @@
+.calendar-button-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .calendar-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: var(--accent-color);
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .calendar-button:hover {
+    background-color: var(--accent-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .calendar-icon {
+    font-size: 1.4rem;
+    margin-right: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .calendar-button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+    
+    .calendar-icon {
+      font-size: 1.2rem;
+    }
+  }
