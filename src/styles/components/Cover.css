@@ -7,8 +7,8 @@
   }
   
   .envelope {
-    width: 300px;
-    height: 400px;
+    width: 400px; /* Aumentado de 300px */
+    height: 500px; /* Aumentado de 400px */
     background-color: var(--primary-color);
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -20,6 +20,7 @@
     position: relative;
     overflow: hidden;
     transition: transform 0.5s ease;
+    margin: 0 auto; /* Centrado horizontal */
   }
   
   .envelope:before {
@@ -40,8 +41,8 @@
     background-color: white;
     border: none;
     color: var(--accent-color);
-    padding: 12px 24px;
-    font-size: 1.2rem;
+    padding: 16px 32px; /* Botón más grande */
+    font-size: 1.3rem; /* Texto más grande */
     border-radius: 50px;
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -73,25 +74,25 @@
   }
   
   .envelope-content h2 {
-    font-size: 2rem;
+    font-size: 2.5rem; /* Más grande */
     margin-bottom: 1rem;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   .envelope-content p {
     margin-bottom: 2rem;
-    font-size: 1rem;
+    font-size: 1.2rem; /* Más grande */
   }
   
   .loading-icon {
-    font-size: 2rem;
+    font-size: 3rem; /* Más grande */
     display: inline-block;
   }
   
   @media (max-width: 768px) {
     .envelope {
-      width: 280px;
-      height: 370px;
+      width: 320px; /* Adaptado para móvil pero aún más grande que el original */
+      height: 420px;
     }
     
     .envelope-content h2 {
@@ -99,7 +100,7 @@
     }
     
     .open-button {
-      padding: 10px 20px;
-      font-size: 1rem;
+      padding: 12px 24px;
+      font-size: 1.1rem;
     }
   }

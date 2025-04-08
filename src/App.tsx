@@ -1,22 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Cover from './components/Cover';
 import Title from './components/Title';
 import Message from './components/Message';
 import Countdown from './components/Countdown';
 import Location from './components/Location';
 import DressCode from './components/DressCode';
-import Gallery from './components/Gallery';
 import CalendarButton from './components/CalendarButton';
 import RSVP from './components/RSVP';
 import './styles/global.css';
 
 function App() {
   const [isInvitationOpen, setIsInvitationOpen] = useState(false);
-  
-  // Añadimos un console.log para seguimiento del estado
-  useEffect(() => {
-    console.log("Estado de invitación:", isInvitationOpen);
-  }, [isInvitationOpen]);
   
   // Aquí definimos las propiedades que luego podrías configurar
   const birthday = {
@@ -31,14 +25,6 @@ function App() {
     dressCode: "Elegante Sport",
     dressCodeDescription: "Te sugerimos vestimenta elegante pero cómoda para disfrutar de la fiesta. Los colores sugeridos son pasteles y tonos neutros.",
     dressCodeColors: ["#f8c6d8", "#d8e8f8", "#f0f0f0", "#d3d3d3"],
-    images: [
-      { src: "https://via.placeholder.com/400x400?text=Foto+1", alt: "Recuerdo 1" },
-      { src: "https://via.placeholder.com/400x400?text=Foto+2", alt: "Recuerdo 2" },
-      { src: "https://via.placeholder.com/400x400?text=Foto+3", alt: "Recuerdo 3" },
-      { src: "https://via.placeholder.com/400x400?text=Foto+4", alt: "Recuerdo 4" },
-      { src: "https://via.placeholder.com/400x400?text=Foto+5", alt: "Recuerdo 5" },
-      { src: "https://via.placeholder.com/400x400?text=Foto+6", alt: "Recuerdo 6" },
-    ],
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLScT-eQIOLYxnBDSfeG8TzDMRFJFWiuy4OsQg6eKE5GQRgcYEw/viewform?embedded=true",
   };
 
@@ -90,10 +76,6 @@ function App() {
               description={birthday.dressCodeDescription}
               colors={birthday.dressCodeColors}
             />
-          </section>
-
-          <section className="section gallery-section" id="gallery">
-            <Gallery images={birthday.images} />
           </section>
 
           <section className="section rsvp-section" id="rsvp">

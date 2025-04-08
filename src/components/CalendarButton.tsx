@@ -10,10 +10,16 @@ interface CalendarButtonProps {
 const CalendarButton: React.FC<CalendarButtonProps> = ({ title, date, location }) => {
   const formatGoogleCalendarUrl = () => {
     const startDate = date.toISOString().replace(/-|:|\.\d+/g, '');
-    // Suponemos que el evento dura 5 horas
-    const endDate = new Date(date.getTime() + 5 * 60 * 60 * 1000).toISOString().replace(/-|:|\.\d+/g, '');
     
-    return `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startDate}/${endDate}&location=${encodeURIComponent(location)}`;
+    // Calculamos la fecha final: siguiente día a las 5:00 AM
+    const eventDate = new Date(date);
+    const endDate = new Date(eventDate);
+    endDate.setDate(endDate.getDate() + 1); // Siguiente día
+    endDate.setHours(5, 0, 0, 0); // 5 AM
+    
+    const endDateStr = endDate.toISOString().replace(/-|:|\.\d+/g, '');
+    
+    return `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startDate}/${endDateStr}&location=${encodeURIComponent(location)}`;
   };
 
   return (
