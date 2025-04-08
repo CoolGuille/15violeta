@@ -15,7 +15,7 @@ function App() {
   // Aquí definimos las propiedades que luego podrías configurar
   const birthday = {
     name: "Violeta",
-    date: new Date('2025-05-31T00:00:00Z'), // Fecha de la fiesta (año-mes-día)
+    date: new Date('2025-06-01T00:00:00Z'), // Fecha de la fiesta (año-mes-día)
     message: "Si estás leyendo esto, es porque eres una persona muy especial para mí. Me encantaría compartir este día tan importante contigo. ¡Te espero para celebrar mis 15 años juntos!",
     venue: "Salón Gala Eventos",
     address: "Centenario 325, Rosario",
