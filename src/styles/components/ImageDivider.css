@@ -1,0 +1,148 @@
+.image-divider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .image-divider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .image-divider-decoration {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .image-divider-decoration.left {
+    justify-content: flex-end;
+  }
+  
+  .image-divider-decoration.right {
+    justify-content: flex-start;
+  }
+  
+  .image-divider-line {
+    height: 2px;
+    width: 80px;
+    background-color: var(--accent-color);
+    opacity: 0.7;
+  }
+  
+  .image-divider-star {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin: 0 10px;
+  }
+  
+  .image-divider-frame {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(145deg, var(--primary-color), var(--accent-color));
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1.5rem;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .image-divider-frame:hover {
+    transform: scale(1.05);
+  }
+  
+  .image-divider-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+  }
+  
+  /* Para agregar un efecto decorativo alrededor de la imagen */
+  .image-divider-frame::before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    border-radius: 50%;
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+    animation: rotate 60s linear infinite;
+  }
+  
+  .image-divider-zoom-hint {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .image-divider-frame:hover .image-divider-zoom-hint {
+    opacity: 1;
+  }
+  
+  .image-divider-zoom-icon {
+    font-size: 0.9rem;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .image-divider-wrapper {
+      flex-direction: column;
+    }
+    
+    .image-divider-decoration {
+      margin: 0.5rem 0;
+    }
+    
+    .image-divider-decoration.left {
+      order: 1;
+      flex-direction: column;
+    }
+    
+    .image-divider-decoration.right {
+      order: 3;
+      flex-direction: column;
+    }
+    
+    .image-divider-frame {
+      order: 2;
+      margin: 1rem 0;
+    }
+    
+    .image-divider-line {
+      width: 60px;
+    }
+    
+    .image-divider-zoom-hint {
+      opacity: 1;
+    }
+  }

@@ -8,6 +8,7 @@ import DressCode from './components/DressCode';
 import CalendarButton from './components/CalendarButton';
 import Gifts from './components/Gifts';
 import RSVP from './components/RSVP';
+import ImageDivider from './components/ImageDivider';
 import './styles/global.css';
 
 function App() {
@@ -27,8 +28,17 @@ function App() {
     dressCodeDescription: "Te sugerimos vestimenta elegante pero cómoda para disfrutar de la fiesta. Los colores sugeridos son pasteles y tonos neutros.",
     dressCodeColors: ["#f8c6d8", "#d8e8f8", "#f0f0f0", "#d3d3d3"],
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLScT-eQIOLYxnBDSfeG8TzDMRFJFWiuy4OsQg6eKE5GQRgcYEw/viewform?embedded=true",
-    bankAlias: "violepp",
-    bankCVU: "0000003100006409902099"
+    bankAlias: "violeta.15anios",
+    bankCVU: "0000003100000000000000",
+    // Aquí agregamos las fotos de Violeta
+    photos: [
+      "/imagenes/foto1.jpeg", // Reemplaza con tus rutas reales de imágenes
+      "/imagenes/foto2.jpeg",
+      "/imagenes/foto3.jpeg",
+      "/imagenes/foto4.jpeg",
+      "/imagenes/foto5.jpeg",
+      "/imagenes/foto6.jpeg"
+    ]
   };
 
   const handleOpenInvitation = () => {
@@ -48,9 +58,13 @@ function App() {
             <Title name={birthday.name} />
           </section>
           
+          <ImageDivider imageUrl={birthday.photos[0]} altText={`Foto de ${birthday.name}`} />
+          
           <section className="section message-section">
             <Message text={birthday.message} />
           </section>
+          
+          <ImageDivider imageUrl={birthday.photos[1]} altText={`Foto de ${birthday.name}`} />
           
           <section className="section countdown-section">
             <div className="countdown-wrapper">
@@ -63,6 +77,8 @@ function App() {
             </div>
           </section>
 
+          <ImageDivider imageUrl={birthday.photos[2]} altText={`Foto de ${birthday.name}`} />
+
           <section className="section location-section" id="location">
             <Location 
               venue={birthday.venue}
@@ -73,6 +89,8 @@ function App() {
             />
           </section>
 
+          <ImageDivider imageUrl={birthday.photos[3]} altText={`Foto de ${birthday.name}`} />
+
           <section className="section dress-code-section" id="dresscode">
             <DressCode 
               code={birthday.dressCode}
@@ -81,12 +99,16 @@ function App() {
             />
           </section>
 
+          <ImageDivider imageUrl={birthday.photos[4]} altText={`Foto de ${birthday.name}`} />
+
           <section className="section gifts-section" id="gifts">
             <Gifts 
               alias={birthday.bankAlias}
               cvu={birthday.bankCVU}
             />
           </section>
+
+          <ImageDivider imageUrl={birthday.photos[5]} altText={`Foto de ${birthday.name}`} />
 
           <section className="section rsvp-section" id="rsvp">
             <RSVP formUrl={birthday.formUrl} />
