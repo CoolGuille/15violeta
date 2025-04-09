@@ -28,16 +28,16 @@ function App() {
     dressCodeDescription: "Te sugerimos vestimenta elegante pero cómoda para disfrutar de la fiesta. Los colores sugeridos son pasteles y tonos neutros.",
     dressCodeColors: ["#f8c6d8", "#d8e8f8", "#f0f0f0", "#d3d3d3"],
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLScT-eQIOLYxnBDSfeG8TzDMRFJFWiuy4OsQg6eKE5GQRgcYEw/viewform?embedded=true",
-    bankAlias: "violeta.15anios",
-    bankCVU: "0000003100000000000000",
+    bankAlias: "violepp",
+    bankCVU: "0000003100006409902099",
     // Aquí agregamos las fotos de Violeta
     photos: [
-      "/imagenes/foto1.jpeg", // Reemplaza con tus rutas reales de imágenes
-      "/imagenes/foto2.jpeg",
-      "/imagenes/foto3.jpeg",
-      "/imagenes/foto4.jpeg",
-      "/imagenes/foto5.jpeg",
-      "/imagenes/foto6.jpeg"
+      "https://i.imgur.com/Jn6ltxQ.jpeg", // Reemplaza con tus rutas reales de imágenes
+      "https://i.imgur.com/bWvVSPK.jpeg",
+      "https://i.imgur.com/vnWSfIw.jpeg",
+      "https://i.imgur.com/UCwCpAH.jpeg",
+      "https://i.imgur.com/qoAumpg.jpeg",
+      "https://i.imgur.com/FZHusGl.jpeg"
     ]
   };
 
