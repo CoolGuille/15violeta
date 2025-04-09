@@ -6,6 +6,7 @@ import Countdown from './components/Countdown';
 import Location from './components/Location';
 import DressCode from './components/DressCode';
 import CalendarButton from './components/CalendarButton';
+import Gifts from './components/Gifts';
 import RSVP from './components/RSVP';
 import './styles/global.css';
 
@@ -22,10 +23,12 @@ function App() {
     eventDate: "31 de Mayo de 2025",
     eventTime: "21:00 hs",
     mapUrl: "https://maps.app.goo.gl/Yof2wpE3gH7UgSiy6",
-    dressCode: "Elegante Sport",
+    dressCode: "Elegante",
     dressCodeDescription: "Te sugerimos vestimenta elegante pero cómoda para disfrutar de la fiesta. Los colores sugeridos son pasteles y tonos neutros.",
     dressCodeColors: ["#f8c6d8", "#d8e8f8", "#f0f0f0", "#d3d3d3"],
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLScT-eQIOLYxnBDSfeG8TzDMRFJFWiuy4OsQg6eKE5GQRgcYEw/viewform?embedded=true",
+    bankAlias: "violepp",
+    bankCVU: "0000003100006409902099"
   };
 
   const handleOpenInvitation = () => {
@@ -78,11 +81,16 @@ function App() {
             />
           </section>
 
+          <section className="section gifts-section" id="gifts">
+            <Gifts 
+              alias={birthday.bankAlias}
+              cvu={birthday.bankCVU}
+            />
+          </section>
+
           <section className="section rsvp-section" id="rsvp">
             <RSVP formUrl={birthday.formUrl} />
           </section>
-          
-          {/* Acá irían los demás componentes que vamos a desarrollar */}
         </div>
       )}
     </div>

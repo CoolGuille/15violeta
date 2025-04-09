@@ -99,8 +99,13 @@ body {
   color: var(--light-text);
 }
 
-.rsvp-section {
+.gifts-section {
   background-color: var(--secondary-color);
+}
+
+.rsvp-section {
+  background-color: var(--primary-color);
+  color: var(--light-text);
 }
 
 h1, h2, h3 {
