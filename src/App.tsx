@@ -30,14 +30,31 @@ function App() {
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLScT-eQIOLYxnBDSfeG8TzDMRFJFWiuy4OsQg6eKE5GQRgcYEw/viewform?embedded=true",
     bankAlias: "violepp",
     bankCVU: "0000003100006409902099",
-    // Aquí agregamos las fotos de Violeta
     photos: [
-      "https://i.imgur.com/Jn6ltxQ.jpeg", // Reemplaza con tus rutas reales de imágenes
-      "https://i.imgur.com/bWvVSPK.jpeg",
-      "https://i.imgur.com/vnWSfIw.jpeg",
-      "https://i.imgur.com/UCwCpAH.jpeg",
-      "https://i.imgur.com/qoAumpg.jpeg",
-      "https://i.imgur.com/FZHusGl.jpeg"
+      {
+        url: "https://i.imgur.com/Jn6ltxQ.jpeg",
+        position: { y: 0, x: 0 }
+      },
+      {
+        url: "https://i.imgur.com/bWvVSPK.jpeg",
+        position: { y: 0, x: 0 }
+      },
+      {
+        url: "https://i.imgur.com/vnWSfIw.jpeg",
+        position: { y: 0, x: 0 }
+      },
+      {
+        url: "https://i.imgur.com/UCwCpAH.jpeg",
+        position: { y: 40, x: 0 }
+      },
+      {
+        url: "https://i.imgur.com/qoAumpg.jpeg",
+        position: { y: 25, x: 0 }
+      },
+      {
+        url: "https://i.imgur.com/FZHusGl.jpeg",
+        position: { y: 0, x: 0 }
+      }
     ]
   };
 
@@ -58,13 +75,21 @@ function App() {
             <Title name={birthday.name} />
           </section>
           
-          <ImageDivider imageUrl={birthday.photos[0]} altText={`Foto de ${birthday.name}`} />
+          <ImageDivider 
+            imageUrl={birthday.photos[0].url} 
+            altText={`Foto de ${birthday.name}`}
+            position={birthday.photos[0].position}
+          />
           
           <section className="section message-section">
             <Message text={birthday.message} />
           </section>
           
-          <ImageDivider imageUrl={birthday.photos[1]} altText={`Foto de ${birthday.name}`} />
+          <ImageDivider 
+            imageUrl={birthday.photos[1].url} 
+            altText={`Foto de ${birthday.name}`}
+            position={birthday.photos[1].position}
+          />
           
           <section className="section countdown-section">
             <div className="countdown-wrapper">
@@ -77,7 +102,11 @@ function App() {
             </div>
           </section>
 
-          <ImageDivider imageUrl={birthday.photos[2]} altText={`Foto de ${birthday.name}`} />
+          <ImageDivider 
+            imageUrl={birthday.photos[2].url} 
+            altText={`Foto de ${birthday.name}`}
+            position={birthday.photos[2].position}
+          />
 
           <section className="section location-section" id="location">
             <Location 
@@ -89,7 +118,11 @@ function App() {
             />
           </section>
 
-          <ImageDivider imageUrl={birthday.photos[3]} altText={`Foto de ${birthday.name}`} />
+          <ImageDivider 
+            imageUrl={birthday.photos[3].url} 
+            altText={`Foto de ${birthday.name}`}
+            position={birthday.photos[3].position}
+          />
 
           <section className="section dress-code-section" id="dresscode">
             <DressCode 
@@ -99,7 +132,11 @@ function App() {
             />
           </section>
 
-          <ImageDivider imageUrl={birthday.photos[4]} altText={`Foto de ${birthday.name}`} />
+          <ImageDivider 
+            imageUrl={birthday.photos[4].url} 
+            altText={`Foto de ${birthday.name}`}
+            position={birthday.photos[4].position}
+          />
 
           <section className="section gifts-section" id="gifts">
             <Gifts 
@@ -108,7 +145,11 @@ function App() {
             />
           </section>
 
-          <ImageDivider imageUrl={birthday.photos[5]} altText={`Foto de ${birthday.name}`} />
+          <ImageDivider 
+            imageUrl={birthday.photos[5].url} 
+            altText={`Foto de ${birthday.name}`}
+            position={birthday.photos[5].position}
+          />
 
           <section className="section rsvp-section" id="rsvp">
             <RSVP formUrl={birthday.formUrl} />

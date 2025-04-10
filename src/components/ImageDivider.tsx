@@ -3,14 +3,21 @@ import { motion } from 'framer-motion';
 import ImageViewer from './ImageViewer';
 import '../styles/components/ImageDivider.css';
 
+interface ImagePosition {
+  x?: number; // Posición horizontal (0 = centrado, negativo = izquierda, positivo = derecha)
+  y?: number; // Posición vertical (0 = centrado, negativo = arriba, positivo = abajo)
+}
+
 interface ImageDividerProps {
   imageUrl: string;
   altText?: string;
+  position?: ImagePosition;
 }
 
 const ImageDivider: React.FC<ImageDividerProps> = ({ 
   imageUrl, 
-  altText = "Foto de Violeta" 
+  altText = "Foto de Violeta",
+  position = { x: 0, y: 0 }
 }) => {
   const [isViewerOpen, setIsViewerOpen] = useState(false);
 
@@ -20,6 +27,14 @@ const ImageDivider: React.FC<ImageDividerProps> = ({
 
   const handleCloseViewer = () => {
     setIsViewerOpen(false);
+  };
+
+  const imageStyle = {
+    objectFit: 'cover' as const,
+    objectPosition: `calc(50% + ${position.x || 0}px) calc(50% + ${position.y || 0}px)`,
+    width: '100%',
+    height: '100%',
+    borderRadius: '50%'
   };
 
   return (
@@ -44,6 +59,7 @@ const ImageDivider: React.FC<ImageDividerProps> = ({
             src={imageUrl} 
             alt={altText} 
             className="image-divider-img" 
+            style={imageStyle}
           />
           <div className="image-divider-zoom-hint">
             <span className="image-divider-zoom-icon">🔍</span>
